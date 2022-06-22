@@ -7,10 +7,12 @@ import com.querydsl.core.types.dsl.Expressions;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.querydsl.jpa.impl.JPAUpdateClause;
+import me.ssu.springquerydslrestapi.global.dto.Pagination;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.support.JpaEntityInformation;
 import org.springframework.data.jpa.repository.support.JpaEntityInformationSupport;
+import org.springframework.data.repository.support.PageableExecutionUtils;
 import org.springframework.data.util.ProxyUtils;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
@@ -135,9 +137,9 @@ public abstract class BaseRepository<E, ID> {
 		return this.getJpaEntityInformation(entity.getClass()).isNew(entity);
 	}
 
-//	protected <DTO> Pagination<DTO> applyPagination(JPAQuery<DTO> contentQuery, JPAQuery<?> countQuery, Pageable pageable) {
-//		return new Pagination<>(PageableExecutionUtils.getPage(contentQuery.offset(pageable.getOffset())
-//				.limit(pageable.getPageSize())
-//				.fetch(), pageable, countQuery::fetchCount));
-//	}
+	protected <DTO> Pagination<DTO> applyPagination(JPAQuery<DTO> contentQuery, JPAQuery<?> countQuery, Pageable pageable) {
+		return new Pagination<>(PageableExecutionUtils.getPage(contentQuery.offset(pageable.getOffset())
+				.limit(pageable.getPageSize())
+				.fetch(), pageable, countQuery::fetchCount));
+	}
 }
