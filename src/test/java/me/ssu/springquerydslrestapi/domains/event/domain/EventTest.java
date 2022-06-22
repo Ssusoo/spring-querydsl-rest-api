@@ -1,0 +1,10 @@
+package me.ssu.springquerydslrestapi.domains.event.domain;
+
+import org.springframework.boot.test.context.SpringBootTest;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+@SpringBootTest
+class EventTest {
+
+}
