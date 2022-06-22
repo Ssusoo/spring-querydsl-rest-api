@@ -32,7 +32,7 @@ public class Event extends BaseEntity {
 	private String eventName; // 이벤트 이름
 
 	@Column(name = "evt_des_crp", length = 20)
-	private String eventDescription; // 설명
+	private String eventDescription; // 이벤트 설명
 
 	private String location; // 이벤트 위치(optional) 이게 없으면 온라인 모임
 	private int basePrice; // 기본 금액(optional)
