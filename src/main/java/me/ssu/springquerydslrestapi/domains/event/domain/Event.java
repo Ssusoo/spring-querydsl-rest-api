@@ -20,8 +20,8 @@ public class Event extends BaseEntity {
 	@Column(name = "evt_sel_no")
 	private Long eventSerialNo;
 
-	@Column(name = "evt_stat_comm_cd", length = 8, nullable = false)
-	private String eventStatusCommonCode;   // 이벤트 상태 공통 코드
+//	@Column(name = "evt_stat_comm_cd", length = 8, nullable = false)
+//	private String eventStatusCommonCode;   // 이벤트 상태 공통 코드
 
 	// TODO 단방향 맵핑
 	@ManyToOne
@@ -40,11 +40,11 @@ public class Event extends BaseEntity {
 	private int limitOfEnrollment; // 등록 한도
 
 
-	@Column(name = "offline_yn", nullable = false)
-	private String offlineYn; // 온/오프라인
-
-	@Column(name = "free_yn", nullable = false)
-	private String freeYn; // 무료/유료
+//	@Column(name = "offline_yn", nullable = false)
+//	private String offlineYn; // 온/오프라인
+//
+//	@Column(name = "free_yn", nullable = false)
+//	private String freeYn; // 무료/유료
 
 	@Column(name = "")
 	private LocalDateTime beginEnrollmentDateTime; // 등록 시작일시
