@@ -29,17 +29,16 @@ public class Event extends BaseEntity {
 	private Account manager;
 
 	@Column(name = "evt_nm", length = 10, nullable = false)
-	private String eventName; // 이벤트 이름
+	private String eventName;                                   // 이벤트 이름
 
 	@Column(name = "evt_des_crp", length = 20)
-	private String eventDescription; // 이벤트 설명
+	private String eventDescription;                            // 이벤트 설명
+	private String location;                                    // 이벤트 위치(optional) 이게 없으면 온라인 모임
+	private int basePrice;                                      // 기본 금액(optional)
+	private int maxPrice;                                       // 최고 금액(optional)
+	private int limitOfEnrollment;                              // 등록 한도
 
-	private String location; // 이벤트 위치(optional) 이게 없으면 온라인 모임
-	private int basePrice; // 기본 금액(optional)
-	private int maxPrice; // 최고 금액(optional)
-	private int limitOfEnrollment; // 등록 한도
-
-
+<<<<<<< HEAD
 //	@Column(name = "offline_yn", nullable = false)
 //	private String offlineYn; // 온/오프라인
 //
@@ -51,4 +50,20 @@ public class Event extends BaseEntity {
 	private LocalDateTime closeEnrollmentDateTime; // 종료일시
 	private LocalDateTime beginEventDateTime; // 이벤트 시작일시
 	private LocalDateTime endEventDateTime; // 이벤트 종료일시
+=======
+	@Column(name = "offline_yn", nullable = false)
+	private String offlineYn;                                   // 온/오프라인
+
+	@Column(name = "free_yn", nullable = false)
+	private String freeYn;                                      // 무료/유료
+
+	@Column(name = "begin_enll_dt")
+	private LocalDateTime beginEnrollmentDateTime;              // 등록 시작일시
+	@Column(name = "close_enll_dt")
+	private LocalDateTime closeEnrollmentDateTime;              // 종료일시
+	@Column(name = "begin_evt_dt")
+	private LocalDateTime beginEventDateTime;                   // 이벤트 시작일시
+	@Column(name = "end_evt_dt")
+	private LocalDateTime endEventDateTime;                     // 이벤트 종료일시
+>>>>>>> b7c7c146320aea8d85e737148f9e51d8fda9fd96
 }
