@@ -38,19 +38,6 @@ public class Event extends BaseEntity {
 	private int maxPrice;                                       // 최고 금액(optional)
 	private int limitOfEnrollment;                              // 등록 한도
 
-<<<<<<< HEAD
-//	@Column(name = "offline_yn", nullable = false)
-//	private String offlineYn; // 온/오프라인
-//
-//	@Column(name = "free_yn", nullable = false)
-//	private String freeYn; // 무료/유료
-
-	@Column(name = "")
-	private LocalDateTime beginEnrollmentDateTime; // 등록 시작일시
-	private LocalDateTime closeEnrollmentDateTime; // 종료일시
-	private LocalDateTime beginEventDateTime; // 이벤트 시작일시
-	private LocalDateTime endEventDateTime; // 이벤트 종료일시
-=======
 	@Column(name = "offline_yn", nullable = false)
 	private String offlineYn;                                   // 온/오프라인
 
@@ -65,5 +52,4 @@ public class Event extends BaseEntity {
 	private LocalDateTime beginEventDateTime;                   // 이벤트 시작일시
 	@Column(name = "end_evt_dt")
 	private LocalDateTime endEventDateTime;                     // 이벤트 종료일시
->>>>>>> b7c7c146320aea8d85e737148f9e51d8fda9fd96
 }
